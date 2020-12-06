@@ -46,12 +46,9 @@ def buy_product():
             return make_response(error_messages.ERR_BAD_REQUEST.format
                                  (PRODUCT + ' ' + QUANTITY), http.HTTPStatus.BAD_REQUEST, CONTENT_TYPE)
         product_id = json.get('product', None)
-        print(type(json))
         quantity = json.get('quantity', 0)
-        print(quantity)
         if product_id is not None and product_id != '':
             if isinstance(quantity, int) and quantity > 0:
-                print('here')
                 product = get_product(product_id)
                 if product is not None:
                     if not get_availabilty(product) < quantity:

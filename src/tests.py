@@ -88,9 +88,7 @@ def test_buy_zero_quantity():
 
 def test_buy_no_payload():
 
-    headers = {'content_type': 'application/json'}
-
-    response = requests.request("POST", BUY_URL, headers=headers)
+    response = requests.request("POST", BUY_URL)
 
     assert response.text == error_messages.ERR_BAD_REQUEST.format('product quantity')
 
@@ -109,7 +107,7 @@ test_buy_positive()
 test_buy_bad_req1()
 test_buy_bad_req2()
 test_buy_neg_quantity()
-test_buy_zero_quantity
+test_buy_zero_quantity()
 test_buy_not_enough_inventory()
 test_buy_product_not_found()
 test_buy_no_payload()
