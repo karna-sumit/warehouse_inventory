@@ -1,0 +1,5 @@
+ERR_NOT_ENOUGH_INVENTORY = "Not enough inventory "
+ERR_PROD_NOT_FOUND = "Product not found "
+ERR_INVALID_CONFIG = "Product {} has invalid article {} config "
+ERR_BAD_REQUEST = "Bad request invalid {}"
+ERR_GENERAL = "Something went wrong. Please try again"
